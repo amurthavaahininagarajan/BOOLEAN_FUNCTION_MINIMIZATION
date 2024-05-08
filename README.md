@@ -31,20 +31,49 @@ Hardware – PCs, Cyclone II , USB flasher
 5.	For different input combinations generate the timing diagram.
 
 
-**Program:**
+**Program:** 
+```
+Developed by: AMURTHA VAAHINI.KN
+RegisterNumber: 212222240008
+```
+```
+module Boolean_min(A,B,C,D,W,X,Y,Z,F1,F2);
+input A,B,C,D,W,X,Y,Z;
+wire x1,x2,x3,x4,x5,x6,x7,x8,x9,x10;
+output F1,F2;
+assign x1=(~A)&(~B)&(~C)&(~D);
+assign x2=(A)&(~C)&(~D);
+assign x3=(~B)&(C)&(~D);
+assign x4=(~A)&(B)&(C)&(D);
+assign x5=(B)&(~C)&(D);
+assign x6=(X)&(~Y)&(Z);
+assign x7=(~X)&(~Y)&(Z);
+assign x8=(~W)&(X)&(Y);
+assign x9=(W)&(~X)&(Y);
+assign x10=(W)&(X)&(Y);
+assign F1=x1|x2|x3|x4|x5;
+assign F2=x6|x7|x8|x9|x10;
+endmodule
+```
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
-
-Developed by: RegisterNumber:*/
 
 
 **RTL realization**
 
+
+![image](https://github.com/amurthavaahininagarajan/BOOLEAN_FUNCTION_MINIMIZATION/assets/118679102/2dbeac2f-d53e-4bef-b88e-f02585a83492)
+
+
 **Output:**
 
-**RTL**
 
-**Timing Diagram**
+![image](https://github.com/amurthavaahininagarajan/BOOLEAN_FUNCTION_MINIMIZATION/assets/118679102/57519f1e-d018-41be-849c-f2d3a9f1cd72)
+
+### Logic symbol & Truthtable:
+
+
+![image](https://github.com/amurthavaahininagarajan/BOOLEAN_FUNCTION_MINIMIZATION/assets/118679102/ab71d769-fb3e-4b90-b040-6fc78f22a603)
+
 
 **Result:**
 
